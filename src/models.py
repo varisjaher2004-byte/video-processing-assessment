@@ -6,7 +6,7 @@ import torchvision.models as models
 # BASELINE MODEL: CNN (ResNet18) + LSTM
 # ======================================================
 
-class BaselineModel(nn.nn.Module):
+class BaselineModel(nn.Module):
     def __init__(self, hidden_dim=256, vocab_size=1000):
         super(BaselineModel, self).__init__()
 

@@ -6,9 +6,9 @@ from torchvision import transforms
 
 class VideoDataset(Dataset):
     def __init__(self, frame_dirs, captions, tags, transform=None):
-        self.frame_dirs = frame_dirs          # list of folders
-        self.captions = captions              # list of captions
-        self.tags = tags                      # list of semantic tags
+        self.frame_dirs = frame_dirs
+        self.captions = captions
+        self.tags = tags
         self.transform = transform or transforms.Compose([
             transforms.Resize((224, 224)),
             transforms.ToTensor()
@@ -16,7 +16,7 @@ class VideoDataset(Dataset):
 
     def load_frames(self, folder_path):
         frames = []
-        files = sorted(os.listdir(folder_path))  # sorted list of frame names
+        files = sorted(os.listdir(folder_path))
 
         for f in files:
             if f.endswith(".jpg") or f.endswith(".png"):
@@ -25,17 +25,18 @@ class VideoDataset(Dataset):
                 img = self.transform(img)
                 frames.append(img)
 
-        return torch.stack(frames)
+        # ⭐⭐ BIG FIX HERE ⭐⭐
+        return torch.stack(frames)  # shape: [num_frames, 3, 224, 224]
 
     def __getitem__(self, idx):
         folder = self.frame_dirs[idx]
         caption = self.captions[idx]
         tag = self.tags[idx]
 
-        frames = self.load_frames(folder)
+        frames_tensor = self.load_frames(folder)
 
         return {
-            "frames": frames,
+            "frames": frames_tensor,   # ⭐ tensor not list
             "caption": caption,
             "tags": tag,
         }

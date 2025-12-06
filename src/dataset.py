@@ -25,7 +25,7 @@ class VideoDataset(Dataset):
                 img = self.transform(img)
                 frames.append(img)
 
-        return frames
+        return torch.stack(frames)
 
     def __getitem__(self, idx):
         folder = self.frame_dirs[idx]

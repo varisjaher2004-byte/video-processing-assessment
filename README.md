@@ -88,6 +88,7 @@ that‍ align with the visual scenes in the input v⁠ide​os.
 
 The​ training los​s curve an⁠d example gener‍ated stories‌
 are available in the `​results/` directory.
+
 Due to computational constraints, the model was trained for a limited number of epochs.
 Results are therefore qualitative and illustrative rather than optimal.
 
@@ -99,6 +100,8 @@ The results highlight the difficulty of learning grounded narrative generation
 from video using a compact model and limited data, and motivate future work
 involving stronger language models or longer training.
 
+Validation loss was monitored during training and shows noisy but stable behaviour,
+which is expected for small datasets and short training schedules.
 
 
 ---

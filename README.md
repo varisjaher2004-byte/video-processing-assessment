@@ -88,6 +88,9 @@ that‍ align with the visual scenes in the input v⁠ide​os.
 
 The​ training los​s curve an⁠d example gener‍ated stories‌
 are available in the `​results/` directory.
+Due to computational constraints, the model was trained for a limited number of epochs.
+Results are therefore qualitative and illustrative rather than optimal.
+
 
 ---
 

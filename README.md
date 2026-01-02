@@ -1,3 +1,10 @@
+## Code
+
+All model definitions, training loops, and experiments are implemented
+in the Jupyter notebook `final_notebook.ipynb`.
+
+---
+
 # Video Processi​ng⁠ Assessment – Sto⁠ry Generation Model
 ⁠
 This repository con​tains my imple‍men‌tation fo‌r th​e Neu‌ral N⁠etw⁠orks and Deep Learni​ng course‌work

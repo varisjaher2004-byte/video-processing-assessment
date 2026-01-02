@@ -91,6 +91,15 @@ are available in the `​results/` directory.
 Due to computational constraints, the model was trained for a limited number of epochs.
 Results are therefore qualitative and illustrative rather than optimal.
 
+Example generated stories show partial coherence but also exhibit repetition,
+unused tokens, and semantic drift. This behaviour is expected given the limited
+number of training epochs and the absence of large-scale language pretraining.
+
+The results highlight the difficulty of learning grounded narrative generation
+from video using a compact model and limited data, and motivate future work
+involving stronger language models or longer training.
+
+
 
 ---
 

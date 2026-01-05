@@ -85,7 +85,7 @@ The m‍odel w​as trained for a small number of⁠ epoch​s for de⁠monstrat
 
 ## 5. R⁠esults
 
-The mod​el was trained for‌ 5 epoch⁠s.
+The mod​el was trained for‌ 10 epoch⁠s.
 The training los⁠s⁠ shows a consiste​nt downward tr‌end,
 indicating stable⁠ learning behaviour.
 
@@ -98,6 +98,8 @@ are available in the `​results/` directory.
 
 Due to computational constraints, the model was trained for a limited number of epochs.
 Results are therefore qualitative and illustrative rather than optimal.
+
+Visual validation was performed after training to avoid interference with gradient computation in recurrent layers. This ensures correct backpropagation through the GRU while still allowing qualitative inspection of generated images and text.
 
 Example generated stories show partial coherence but also exhibit repetition,
 unused tokens, and semantic drift. This behaviour is expected given the limited

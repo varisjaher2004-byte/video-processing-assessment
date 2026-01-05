@@ -112,6 +112,10 @@ involving stronger language models or longer training.
 Validation loss was monitored during training and shows noisy but stable behaviour,
 which is expected for small datasets and short training schedules.
 
+In the baseline experiment, temporal modeling was removed by processing each frame independently.
+The sequence dimension was collapsed using mean pooling, ensuring no memory of frame order was preserved.
+This allows direct comparison with the GRU-based model.
+
 
 ---
 
